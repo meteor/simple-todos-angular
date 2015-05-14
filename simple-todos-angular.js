@@ -24,7 +24,9 @@ if (Meteor.isClient) {
       $scope.addTask = function(newTask){
         $scope.tasks.push({
             text: newTask,
-            createdAt: new Date()}
+            createdAt: new Date(),
+            owner: Meteor.userId(),
+            username: Meteor.user().username}
         );
       };
 
@@ -40,4 +42,8 @@ if (Meteor.isClient) {
       };
 
     }]);
+
+  Accounts.ui.config({
+    passwordSignupFields: "USERNAME_ONLY"
+  });
 }

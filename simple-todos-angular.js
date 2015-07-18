@@ -25,13 +25,16 @@ if (Meteor.isClient) {
         return Tasks.find($scope.getReactively('query'), {sort: {createdAt: -1}})
       });
 
-      $scope.addTask = function(newTask) {
-        $scope.tasks.push( {
-            text: newTask,
-            createdAt: new Date(),             // current time
-            owner: Meteor.userId(),            // _id of logged in user
-            username: Meteor.user().username }  // username of logged in user
-        );
+      $scope.addTask = function (newTask) {
+        $meteor.call('addTask', newTask);
+      };
+
+      $scope.deleteTask = function (task) {
+        $meteor.call('deleteTask', task._id);
+      };
+
+      $scope.setChecked = function (task) {
+        $meteor.call('setChecked', task._id, !task.checked);
       };
 
       $scope.$watch('hideCompleted', function() {

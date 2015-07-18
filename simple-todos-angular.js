@@ -35,5 +35,9 @@ if (Meteor.isClient) {
           $scope.query = {};
       });
 
+      $scope.incompleteCount = function () {
+        return Tasks.find({ checked: {$ne: true} }).count();
+      };
+
     }]);
 }

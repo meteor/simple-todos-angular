@@ -21,6 +21,8 @@ if (Meteor.isClient) {
   angular.module('simple-todos').controller('TodosListCtrl', ['$scope', '$meteor',
     function ($scope, $meteor) {
 
+      $scope.$meteorSubscribe('tasks');
+
       $scope.tasks = $meteor.collection(function() {
         return Tasks.find($scope.getReactively('query'), {sort: {createdAt: -1}})
       });

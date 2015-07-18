@@ -39,6 +39,10 @@ if (Meteor.isClient) {
         $meteor.call('setChecked', task._id, !task.checked);
       };
 
+      $scope.setPrivate = function (task) {
+        $meteor.call('setPrivate', task._id, ! task.private);
+      };
+
       $scope.$watch('hideCompleted', function() {
         if ($scope.hideCompleted)
           $scope.query = {checked: {$ne: true}};

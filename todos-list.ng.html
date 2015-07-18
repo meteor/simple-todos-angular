@@ -24,7 +24,9 @@
 
       <input type="checkbox" ng-model="task.checked" class="toggle-checked" />
 
-      <span class="text">{{task.text}}</span>
+      <span class="text">
+        <strong>{{task.username}}</strong> - {{task.text}}
+      </span>
     </li>
   </ul>
 </div>

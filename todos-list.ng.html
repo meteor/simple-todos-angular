@@ -7,6 +7,8 @@
       Hide Completed Tasks
     </label>
 
+    <meteor-include src="loginButtons"></meteor-include>
+
     <!-- add a form below the h1 -->
     <form class="new-task" ng-submit="addTask(newTask); newTask='';">
       <input ng-model="newTask" type="text"

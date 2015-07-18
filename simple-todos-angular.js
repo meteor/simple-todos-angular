@@ -2,6 +2,10 @@ Tasks = new Mongo.Collection('tasks');
 
 if (Meteor.isClient) {
 
+  Accounts.ui.config({
+    passwordSignupFields: "USERNAME_ONLY"
+  });
+
   // This code only runs on the client
   angular.module('simple-todos',['angular-meteor']);
 

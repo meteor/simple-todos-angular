@@ -14,8 +14,8 @@
 		</form>
 	</header>
 
-	<ul ng-repeat="task in tasks">
-		<li ng-class="{'checked': task.checked, 'private': task.private}">
+	<ul>
+		<li ng-repeat="task in tasks" ng-class="{'checked': task.checked, 'private': task.private}">
 			<button class="delete" ng-click="deleteTask(task)">&times;</button>
 
 			<input type="checkbox" ng-checked="task.checked" ng-click="setChecked(task)" class="toggle-checked" />

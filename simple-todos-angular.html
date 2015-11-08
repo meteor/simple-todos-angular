@@ -19,7 +19,13 @@
   </header>
 
   <ul>
-    <li ng-repeat="task in tasks">{{task.text}}</li>
+    <li ng-repeat="task in tasks" ng-class="{'checked': task.checked}">
+      <button class="delete" ng-click="tasks.remove(task)">&times;</button>
+
+      <input type="checkbox" ng-model="task.checked" class="toggle-checked" />
+
+      <span class="text">{{task.text}}</span>
+    </li>
   </ul>
 
 </div>

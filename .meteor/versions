@@ -6,7 +6,6 @@ angular@1.2.0-rc.6
 angular-meteor-data@0.0.4
 angular-templates@0.0.1
 angular:angular@1.4.7
-autopublish@1.0.4
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4

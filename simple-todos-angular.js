@@ -3,7 +3,7 @@ Tasks = new Mongo.Collection('tasks');
 if (Meteor.isClient) {
 
   // This code only runs on the client
-  angular.module('simple-todos',['angular-meteor']);
+  angular.module('simple-todos',['angular-meteor', 'accounts.ui']);
 
   function onReady() {
     angular.bootstrap(document, ['simple-todos']);

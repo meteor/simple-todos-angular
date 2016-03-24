@@ -60,6 +60,10 @@ class TodosListCtrl {
   removeTask(task) {
     Meteor.call('tasks.remove', task._id);
   }
+
+  setPrivate(task) {
+    Meteor.call('tasks.setPrivate', task._id, !task.private);
+  }
 }
 
 export default angular.module('todosList', [

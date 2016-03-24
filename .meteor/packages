@@ -19,3 +19,4 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 angular-templates
 accounts-password
 dotansimha:accounts-ui-angular
+practicalmeteor:mocha

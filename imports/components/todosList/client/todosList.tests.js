@@ -51,6 +51,10 @@ describe('todosList', function() {
         sinon.assert.calledOnce(Meteor.call);
         sinon.assert.calledWith(Meteor.call, 'tasks.insert', newTask);
       });
+
+      it('should reset newTask', function() {
+        assert.equal(controller.newTask, '');
+      });
     });
   });
 })

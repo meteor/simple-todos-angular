@@ -23,5 +23,9 @@
     <span class="text">
       <strong>{{task.username}}</strong> - {{task.text}}
     </span>
+
+    <button class="toggle-private" ng-click="$ctrl.setPrivate(task)" ng-show="task.owner === $ctrl.currentUser._id">
+      {{task.private == true ? "Private" : "Public"}}
+    </button>
   </li>
 </ul>

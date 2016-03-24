@@ -1,6 +1,11 @@
 <header>
   <h1>Todo List</h1>
 
+  <label class="hide-completed">
+    <input type="checkbox" ng-model="$ctrl.hideCompleted"/>
+    Hide Completed Tasks
+  </label>
+
   <form class="new-task" ng-submit="$ctrl.addTask($ctrl.newTask)">
     <input ng-model="$ctrl.newTask" type="text" name="text" placeholder="Type to add new tasks"/>
   </form>
